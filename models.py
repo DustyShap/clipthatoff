@@ -20,7 +20,7 @@ class Drop(db.Model):
         'transcription': self.transcription.upper()
         }
 
-    def id_lookup(filename):
+    def id_lookup(filename=None):
         drop = Drop.query.filter(
                 Drop.filename == filename
         ).first()

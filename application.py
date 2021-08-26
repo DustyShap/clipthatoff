@@ -85,15 +85,16 @@ def process():
 def click_stat():
     filename = request.form['filename']
     cell_clicked = request.form['cell_clicked']
-    drop_id = Drop.id_lookup(filename)
-    click = ClickStat(
-    drop_id=drop_id,
-    filename=filename,
-    clicked_from_cell = False if cell_clicked == 'false' else True,
-    click_time=datetime.datetime.now(TIMEZONE).strftime("%m-%d-%Y %I:%M:%S")
-    )
-    database_add(click)
-    return ('', 201)
+    if filename and cell_clicked:
+        drop_id = Drop.id_lookup(filename)
+        click = ClickStat(
+        drop_id=drop_id,
+        filename=filename,
+        clicked_from_cell = False if cell_clicked == 'false' else True,
+        click_time=datetime.datetime.now(TIMEZONE).strftime("%m-%d-%Y %I:%M:%S")
+        )
+        database_add(click)
+        return ('', 201)
 
 @app.route("/search_stat", methods=["POST"])
 def search_stat():
