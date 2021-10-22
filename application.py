@@ -91,10 +91,11 @@ def click_stat():
         drop_id=drop_id,
         filename=filename,
         clicked_from_cell = False if cell_clicked == 'false' else True,
-        click_time=datetime.datetime.now(TIMEZONE).strftime("%m-%d-%Y %I:%M:%S")
+        click_time=datetime.datetime.now(TIMEZONE).strftime("%m-%d-%Y %H:%M:%S")
         )
-        database_add(click)
-        return ('', 201)
+        if drop_id:
+            database_add(click)
+            return ('', 201)
 
 @app.route("/search_stat", methods=["POST"])
 def search_stat():

@@ -24,8 +24,7 @@ class Drop(db.Model):
         drop = Drop.query.filter(
                 Drop.filename == filename
         ).first()
-        return drop.id
-
+        return drop.id if drop and drop.id else None
 
 
 
