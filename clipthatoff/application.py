@@ -96,6 +96,7 @@ def click_stat():
         if drop_id:
             database_add(click)
             return ('', 201)
+    return ('', 404)
 
 @app.route("/search_stat", methods=["POST"])
 def search_stat():
