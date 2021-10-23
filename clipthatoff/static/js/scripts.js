@@ -162,9 +162,11 @@ function clickplay(e) {
 }
 
 function postServer(filename, cell_clicked){
+  console.log(filename.slice(28))
+  console.log(cell_clicked)
     $.ajax({
       data: {
-        filename: filename,
+        filename: filename.slice(28),
         cell_clicked: cell_clicked
       },
       type: 'POST',

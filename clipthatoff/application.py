@@ -85,6 +85,7 @@ def process():
 def click_stat():
     filename = request.form['filename']
     cell_clicked = request.form['cell_clicked']
+    print(filename)
     if filename and cell_clicked:
         drop_id = Drop.id_lookup(filename)
         click = ClickStat(
