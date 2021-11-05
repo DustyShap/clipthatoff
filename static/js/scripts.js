@@ -3,7 +3,7 @@
 var $results = $("#results_container")
 var $result_object = $("#result_object")
 var url = '../static/audio/'
-var s3_url='https://s3-us-west-2.amazonaws.com/tmadrops/'
+var s3_url='https://tmadrops.s3-us-west-2.amazonaws.com/'
 
 
 
@@ -52,7 +52,6 @@ function submitUrlSearch(search_term){
 
 //Function that takes a searched value and queries the DB for associated tags
 function submitSearchData(event) {
-
   $("#password_window").hide()
   $("#upload_window").hide()
   var chosen = $(".header_image").attr('id');
@@ -116,7 +115,7 @@ function processData(data) {
     var filename = data.drops[i].filename;
     var speaker = data.drops[i].speaker;
     var transcription = data.drops[i].transcription;
-    var full_url = url + filename;
+    var full_url = s3_url + filename;
     $result_object.clone().appendTo($("#results_container")).attr('id', 'result' + i).addClass("search_result");
     $("#result" + i).attr('draggable', 'True');
     $("#result" + i + " #speaker").text(speaker).css('color', 'red');
@@ -129,7 +128,7 @@ function processData(data) {
   }
   $('.fa-play-circle').on('click', clickplay);
   $('.fa-pause-circle').on('click', clickpause);
-  $(".link_button").on('click', clicklink);
+  $(".link_button").click(clicklink);
   $('.search_result').hover(function() {
     $(this).children()[2].className = 'gripper_container gripper_hover'
   }, function() {
@@ -189,8 +188,8 @@ function clickpause(e) {
 
 //Function to handle generating a link in a result object
 function clicklink(e) {
-  var filename = $(this).parent().parent()[0].children[2].children[0].getAttribute('src').slice(16);
-  full = url + filename;
+  var filename = $(this).parent().parent()[0].children[2].children[0].getAttribute('src').slice(44);
+  full = s3_url + filename;
   var a = $(this).parent()[0];
   a.setAttribute('href', full);
 }
