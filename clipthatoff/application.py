@@ -85,6 +85,7 @@ def process():
 def click_stat():
     filename = request.form['filename']
     cell_clicked = request.form['cell_clicked']
+    print(filename)
     if filename and cell_clicked:
         drop_id = Drop.id_lookup(filename)
         click = ClickStat(
@@ -96,6 +97,7 @@ def click_stat():
         if drop_id:
             database_add(click)
             return ('', 201)
+    return ('', 404)
 
 @app.route("/search_stat", methods=["POST"])
 def search_stat():

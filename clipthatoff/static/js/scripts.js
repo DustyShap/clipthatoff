@@ -2,8 +2,8 @@
 
 var $results = $("#results_container")
 var $result_object = $("#result_object")
-var url = '../static/audio/'
-var s3_url='https://s3-us-west-2.amazonaws.com/tmadrops/'
+// var url = '../static/audio/'
+var s3_url='https://tmadrops.s3.us-west-2.amazonaws.com/'
 
 
 
@@ -116,7 +116,7 @@ function processData(data) {
     var filename = data.drops[i].filename;
     var speaker = data.drops[i].speaker;
     var transcription = data.drops[i].transcription;
-    var full_url = url + filename;
+    var full_url = s3_url + filename;
     $result_object.clone().appendTo($("#results_container")).attr('id', 'result' + i).addClass("search_result");
     $("#result" + i).attr('draggable', 'True');
     $("#result" + i + " #speaker").text(speaker).css('color', 'red');
@@ -162,9 +162,11 @@ function clickplay(e) {
 }
 
 function postServer(filename, cell_clicked){
+  console.log(filename.slice(28))
+  console.log(cell_clicked)
     $.ajax({
       data: {
-        filename: filename,
+        filename: filename.slice(28),
         cell_clicked: cell_clicked
       },
       type: 'POST',
@@ -189,8 +191,8 @@ function clickpause(e) {
 
 //Function to handle generating a link in a result object
 function clicklink(e) {
-  var filename = $(this).parent().parent()[0].children[2].children[0].getAttribute('src').slice(16);
-  full = url + filename;
+  var filename = $(this).parent().parent()[0].children[2].children[0].getAttribute('src').slice(44);
+  full = s3_url + filename;
   var a = $(this).parent()[0];
   a.setAttribute('href', full);
 }

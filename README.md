@@ -5,4 +5,4 @@ Soundboard application for [The Morning After](http://insidestl.com/radio-shows/
 www.clipthatoff.com
 
 
-![Clip That Off](static/img/clipthatoff.png)
+![Clip That Off](clipthatoff/static/img/clipthatoff.png)
