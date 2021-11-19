@@ -1,7 +1,8 @@
 import unittest
 import os
 import datetime
-from application import app
+
+from clipthatoff.application import app
 
 
 
