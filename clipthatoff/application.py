@@ -1,18 +1,22 @@
-import os
-from flask import (Flask, session,
-                   render_template, url_for, redirect, request, jsonify)
-from flask_session import Session
-from sqlalchemy import create_engine, desc
-from sqlalchemy.orm import scoped_session, sessionmaker
-from sqlalchemy import create_engine
-from models import Drop, db, AdminUser, ClickStat, SearchStat
-from create import create_app
 import boto3
 import csv
 import datetime
+import os
 import requests
-from pytz import timezone
+from flask import (Flask, session,
+                   render_template, url_for, redirect, request, jsonify)
+from flask_session import Session
 from flask_uploads import UploadSet, configure_uploads, AUDIO
+from sqlalchemy import create_engine, desc
+from sqlalchemy.orm import scoped_session, sessionmaker
+from sqlalchemy import create_engine
+from pytz import timezone
+
+from clipthatoff.models import Drop, db, AdminUser, ClickStat, SearchStat
+from clipthatoff.create import create_app
+
+
+
 
 application = app = Flask(__name__)
 
