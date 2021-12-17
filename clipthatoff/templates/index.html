@@ -194,10 +194,19 @@
      <script src='/static/js/process.js'></script>
      <script src='/static/js/upload.js'></script>
      <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js"></script>
+     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
      <script>
        {% if search_term %}
        submitUrlSearch('{{search_term}}')
       {% endif %}
+					var pusher = new Pusher('bfe7316a484a926be944', {
+						cluster: 'us2'
+					});
+
+					var channel = pusher.subscribe('my-channel');
+					channel.bind('my-event', function(data) {
+						alert(JSON.stringify(data));
+					});
      </script>
   </body>
 </html>

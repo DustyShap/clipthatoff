@@ -45,3 +45,7 @@ class SearchStat(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     search_string = db.Column(db.String, nullable=False)
     search_time = db.Column(db.DateTime, nullable=False)
+
+class Page(db.Model):
+    __tablename__ = 'pages'
+    id = db.Column

@@ -2,6 +2,7 @@ import boto3
 import csv
 import datetime
 import os
+import pusher
 import requests
 from flask import (Flask, session,
                    render_template, url_for, redirect, request, jsonify)
@@ -27,6 +28,18 @@ configure_uploads(app, audio)
 app.app_context().push()
 s3 = boto3.client('s3')
 TIMEZONE = timezone('America/Chicago')
+
+
+pusher_client = pusher.Pusher(
+    app_id=os.getenv('PUSHER_APP_ID'),
+    key=os.getenv('PUSHER_KEY'),
+    secret=os.getenv('PUSHER_SECRET'),
+    cluster='us2',
+    ssl=True
+)
+
+pusher_client.trigger('my-channel', 'my-event', {'message': 'hello world'})
+
 
 
 @app.route('/')
