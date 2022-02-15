@@ -1,6 +1,6 @@
 # Clip That Off
 
-Soundboard application for [The Morning After](http://insidestl.com/radio-shows/the-morning-after) radio show
+Soundboard application for [The Morning After](http://tmastl.com/) radio show
 
 www.clipthatoff.com
 
