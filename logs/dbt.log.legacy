@@ -74,3 +74,657 @@
 2022-03-29 16:33:17.281553 (Thread-19): handling status request
 2022-03-29 16:33:17.282815 (Thread-19): 16:33:17  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f12e4155a60>]}
 2022-03-29 16:33:17.283256 (Thread-19): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:33:19.307578 (Thread-20): 16:33:19  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-29 16:33:19.307767 (Thread-20): 16:33:19  Partial parsing enabled, no changes found, skipping parsing
+2022-03-29 16:33:19.312848 (Thread-20): 16:33:19  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13059bd040>]}
+2022-03-29 16:33:19.799010 (Thread-21): handling status request
+2022-03-29 16:33:19.799370 (Thread-21): 16:33:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f12e41d6970>]}
+2022-03-29 16:33:19.799873 (Thread-21): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:33:19.845653 (Thread-22): handling status request
+2022-03-29 16:33:19.845980 (Thread-22): 16:33:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f12e4635a90>]}
+2022-03-29 16:33:19.846415 (Thread-22): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:33:30.018217 (Thread-23): handling status request
+2022-03-29 16:33:30.018547 (Thread-23): 16:33:30  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f12e41ba400>]}
+2022-03-29 16:33:30.018991 (Thread-23): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:33:30.258436 (Thread-24): handling run_sql request
+2022-03-29 16:33:30.258755 (Thread-24): 16:33:30  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a32f10>]}
+2022-03-29 16:33:32.376179 (Thread-24): sending response (<Response 138 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:33:32.405550 (MainThread): 16:33:32  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9949b77e-636c-4966-8998-a2788c6364c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30fd3b8e80>]}
+2022-03-29 16:33:32.406251 (MainThread): 16:33:32  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 165 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-29 16:33:32.406862 (Thread-1): 16:33:32  Acquiring new postgres connection "rpc.my_new_project.request"
+2022-03-29 16:33:32.406996 (Thread-1): 16:33:32  Began compiling node rpc.my_new_project.request
+2022-03-29 16:33:32.407089 (Thread-1): 16:33:32  Compiling rpc.my_new_project.request
+2022-03-29 16:33:32.409578 (Thread-1): 16:33:32  finished collecting timing info
+2022-03-29 16:33:32.409707 (Thread-1): 16:33:32  Began executing node rpc.my_new_project.request
+2022-03-29 16:33:32.409805 (Thread-1): 16:33:32  Using postgres connection "rpc.my_new_project.request"
+2022-03-29 16:33:32.409879 (Thread-1): 16:33:32  On rpc.my_new_project.request: 
+
+  select 0 as number  union all 
+
+
+
+  select 1 as number  union all 
+
+
+
+  select 2 as number  union all 
+
+
+
+  select 3 as number  union all 
+
+
+
+  select 4 as number  union all 
+
+
+
+  select 5 as number  union all 
+
+
+
+  select 6 as number  union all 
+
+
+
+  select 7 as number  union all 
+
+
+
+  select 8 as number  union all 
+
+
+
+  select 9 as number 
+
+
+limit 500
+/* limit added automatically by dbt cloud */
+2022-03-29 16:33:32.409995 (Thread-1): 16:33:32  Opening a new connection, currently in state init
+2022-03-29 16:33:32.424366 (Thread-1): 16:33:32  SQL status: SELECT 10 in 0.01 seconds
+2022-03-29 16:33:32.425438 (Thread-1): 16:33:32  finished collecting timing info
+2022-03-29 16:33:32.425580 (Thread-1): 16:33:32  On rpc.my_new_project.request: Close
+2022-03-29 16:33:32.607590 (Thread-25): handling poll request
+2022-03-29 16:33:32.607977 (Thread-25): 16:33:32  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13059f65b0>]}
+2022-03-29 16:33:32.609216 (Thread-25): sending response (<Response 8088 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:33:56.174307 (Thread-26): handling status request
+2022-03-29 16:33:56.175720 (Thread-26): 16:33:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13059f6550>]}
+2022-03-29 16:33:56.176200 (Thread-26): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:33:56.432716 (Thread-27): handling status request
+2022-03-29 16:33:56.433059 (Thread-27): 16:33:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13059f6580>]}
+2022-03-29 16:33:56.433521 (Thread-27): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:33:56.498691 (Thread-28): handling cli_args request
+2022-03-29 16:33:56.499035 (Thread-28): 16:33:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13059f62b0>]}
+2022-03-29 16:33:58.649424 (Thread-28): sending response (<Response 138 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:33:58.731296 (MainThread): 16:33:58  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-29 16:33:58.731731 (MainThread): 16:33:58  Partial parsing enabled, no changes found, skipping parsing
+2022-03-29 16:33:58.737638 (MainThread): 16:33:58  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '529bd441-f0e8-44dc-b6a5-956ee9a358f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffacb3681f0>]}
+2022-03-29 16:33:58.758452 (MainThread): 16:33:58  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '529bd441-f0e8-44dc-b6a5-956ee9a358f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffacbbc7f40>]}
+2022-03-29 16:33:58.758765 (MainThread): 16:33:58  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 165 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-29 16:33:58.759870 (MainThread): 16:33:58  
+2022-03-29 16:33:58.760199 (MainThread): 16:33:58  Acquiring new postgres connection "master"
+2022-03-29 16:33:58.761116 (ThreadPoolExecutor-0_0): 16:33:58  Acquiring new postgres connection "list_dbrq74es45kerr"
+2022-03-29 16:33:58.771069 (ThreadPoolExecutor-0_0): 16:33:58  Using postgres connection "list_dbrq74es45kerr"
+2022-03-29 16:33:58.771431 (ThreadPoolExecutor-0_0): 16:33:58  On list_dbrq74es45kerr: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "connection_name": "list_dbrq74es45kerr"} */
+
+    select distinct nspname from pg_namespace
+  
+2022-03-29 16:33:58.771530 (ThreadPoolExecutor-0_0): 16:33:58  Opening a new connection, currently in state init
+2022-03-29 16:33:58.786564 (ThreadPoolExecutor-0_0): 16:33:58  SQL status: SELECT 4 in 0.01 seconds
+2022-03-29 16:33:58.787881 (ThreadPoolExecutor-0_0): 16:33:58  On list_dbrq74es45kerr: Close
+2022-03-29 16:33:58.788760 (ThreadPoolExecutor-0_0): 16:33:58  Acquiring new postgres connection "create_dbrq74es45kerr_drshapiro"
+2022-03-29 16:33:58.789003 (ThreadPoolExecutor-0_0): 16:33:58  Acquiring new postgres connection "create_dbrq74es45kerr_drshapiro"
+2022-03-29 16:33:58.789178 (ThreadPoolExecutor-0_0): 16:33:58  Creating schema "_ReferenceKey(database='dbrq74es45kerr', schema='drshapiro', identifier=None)"
+2022-03-29 16:33:58.794494 (ThreadPoolExecutor-0_0): 16:33:58  Using postgres connection "create_dbrq74es45kerr_drshapiro"
+2022-03-29 16:33:58.794619 (ThreadPoolExecutor-0_0): 16:33:58  On create_dbrq74es45kerr_drshapiro: BEGIN
+2022-03-29 16:33:58.794703 (ThreadPoolExecutor-0_0): 16:33:58  Opening a new connection, currently in state closed
+2022-03-29 16:33:58.805981 (ThreadPoolExecutor-0_0): 16:33:58  SQL status: BEGIN in 0.01 seconds
+2022-03-29 16:33:58.806158 (ThreadPoolExecutor-0_0): 16:33:58  Using postgres connection "create_dbrq74es45kerr_drshapiro"
+2022-03-29 16:33:58.806241 (ThreadPoolExecutor-0_0): 16:33:58  On create_dbrq74es45kerr_drshapiro: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "connection_name": "create_dbrq74es45kerr_drshapiro"} */
+create schema if not exists "drshapiro"
+2022-03-29 16:33:58.812080 (ThreadPoolExecutor-0_0): 16:33:58  SQL status: CREATE SCHEMA in 0.01 seconds
+2022-03-29 16:33:58.812892 (ThreadPoolExecutor-0_0): 16:33:58  On create_dbrq74es45kerr_drshapiro: COMMIT
+2022-03-29 16:33:58.813000 (ThreadPoolExecutor-0_0): 16:33:58  Using postgres connection "create_dbrq74es45kerr_drshapiro"
+2022-03-29 16:33:58.813075 (ThreadPoolExecutor-0_0): 16:33:58  On create_dbrq74es45kerr_drshapiro: COMMIT
+2022-03-29 16:33:58.815131 (ThreadPoolExecutor-0_0): 16:33:58  SQL status: COMMIT in 0.0 seconds
+2022-03-29 16:33:58.815265 (ThreadPoolExecutor-0_0): 16:33:58  On create_dbrq74es45kerr_drshapiro: Close
+2022-03-29 16:33:58.816588 (ThreadPoolExecutor-1_0): 16:33:58  Acquiring new postgres connection "list_dbrq74es45kerr_drshapiro"
+2022-03-29 16:33:58.822394 (ThreadPoolExecutor-1_0): 16:33:58  Using postgres connection "list_dbrq74es45kerr_drshapiro"
+2022-03-29 16:33:58.822513 (ThreadPoolExecutor-1_0): 16:33:58  On list_dbrq74es45kerr_drshapiro: BEGIN
+2022-03-29 16:33:58.822604 (ThreadPoolExecutor-1_0): 16:33:58  Opening a new connection, currently in state closed
+2022-03-29 16:33:58.834654 (ThreadPoolExecutor-1_0): 16:33:58  SQL status: BEGIN in 0.01 seconds
+2022-03-29 16:33:58.834819 (ThreadPoolExecutor-1_0): 16:33:58  Using postgres connection "list_dbrq74es45kerr_drshapiro"
+2022-03-29 16:33:58.834903 (ThreadPoolExecutor-1_0): 16:33:58  On list_dbrq74es45kerr_drshapiro: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "connection_name": "list_dbrq74es45kerr_drshapiro"} */
+select
+      'dbrq74es45kerr' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'drshapiro'
+    union all
+    select
+      'dbrq74es45kerr' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'drshapiro'
+  
+2022-03-29 16:33:58.851593 (ThreadPoolExecutor-1_0): 16:33:58  SQL status: SELECT 0 in 0.02 seconds
+2022-03-29 16:33:58.852673 (ThreadPoolExecutor-1_0): 16:33:58  On list_dbrq74es45kerr_drshapiro: ROLLBACK
+2022-03-29 16:33:58.853357 (ThreadPoolExecutor-1_0): 16:33:58  On list_dbrq74es45kerr_drshapiro: Close
+2022-03-29 16:33:58.857615 (MainThread): 16:33:58  Using postgres connection "master"
+2022-03-29 16:33:58.857763 (MainThread): 16:33:58  On master: BEGIN
+2022-03-29 16:33:58.857872 (MainThread): 16:33:58  Opening a new connection, currently in state init
+2022-03-29 16:33:58.874566 (MainThread): 16:33:58  SQL status: BEGIN in 0.02 seconds
+2022-03-29 16:33:58.874748 (MainThread): 16:33:58  Using postgres connection "master"
+2022-03-29 16:33:58.874831 (MainThread): 16:33:58  On master: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2022-03-29 16:33:58.890779 (Thread-29): handling poll request
+2022-03-29 16:33:58.891150 (Thread-29): 16:33:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13059bd3a0>]}
+2022-03-29 16:33:58.892295 (Thread-29): sending response (<Response 17145 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:33:58.910327 (MainThread): 16:33:58  SQL status: SELECT 0 in 0.04 seconds
+2022-03-29 16:33:58.911666 (MainThread): 16:33:58  On master: ROLLBACK
+2022-03-29 16:33:58.912456 (MainThread): 16:33:58  Using postgres connection "master"
+2022-03-29 16:33:58.912563 (MainThread): 16:33:58  On master: BEGIN
+2022-03-29 16:33:58.913727 (MainThread): 16:33:58  SQL status: BEGIN in 0.0 seconds
+2022-03-29 16:33:58.913850 (MainThread): 16:33:58  On master: COMMIT
+2022-03-29 16:33:58.913963 (MainThread): 16:33:58  Using postgres connection "master"
+2022-03-29 16:33:58.914036 (MainThread): 16:33:58  On master: COMMIT
+2022-03-29 16:33:58.914644 (MainThread): 16:33:58  SQL status: COMMIT in 0.0 seconds
+2022-03-29 16:33:58.914760 (MainThread): 16:33:58  On master: Close
+2022-03-29 16:33:58.915172 (MainThread): 16:33:58  Concurrency: 4 threads (target='default')
+2022-03-29 16:33:58.915289 (MainThread): 16:33:58  
+2022-03-29 16:33:58.917521 (Thread-1): 16:33:58  Began running node model.my_new_project.my_first_dbt_model
+2022-03-29 16:33:58.917833 (Thread-1): 16:33:58  1 of 2 START table model drshapiro.my_first_dbt_model........................... [RUN]
+2022-03-29 16:33:58.918150 (Thread-1): 16:33:58  Acquiring new postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:33:58.918252 (Thread-1): 16:33:58  Began compiling node model.my_new_project.my_first_dbt_model
+2022-03-29 16:33:58.918351 (Thread-1): 16:33:58  Compiling model.my_new_project.my_first_dbt_model
+2022-03-29 16:33:58.920783 (Thread-1): 16:33:58  Writing injected SQL for node "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:33:58.950917 (Thread-1): 16:33:58  finished collecting timing info
+2022-03-29 16:33:58.951135 (Thread-1): 16:33:58  Began executing node model.my_new_project.my_first_dbt_model
+2022-03-29 16:33:58.977074 (Thread-1): 16:33:58  Writing runtime SQL for node "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:33:59.009738 (Thread-1): 16:33:59  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:33:59.009939 (Thread-1): 16:33:59  On model.my_new_project.my_first_dbt_model: BEGIN
+2022-03-29 16:33:59.010040 (Thread-1): 16:33:59  Opening a new connection, currently in state closed
+2022-03-29 16:33:59.025206 (Thread-1): 16:33:59  SQL status: BEGIN in 0.02 seconds
+2022-03-29 16:33:59.025380 (Thread-1): 16:33:59  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:33:59.025464 (Thread-1): 16:33:59  On model.my_new_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_first_dbt_model"} */
+
+
+  create  table "dbrq74es45kerr"."drshapiro"."my_first_dbt_model__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+2022-03-29 16:33:59.055400 (Thread-1): 16:33:59  SQL status: SELECT 2 in 0.03 seconds
+2022-03-29 16:33:59.061580 (Thread-1): 16:33:59  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:33:59.061722 (Thread-1): 16:33:59  On model.my_new_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_first_dbt_model"} */
+alter table "dbrq74es45kerr"."drshapiro"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+2022-03-29 16:33:59.062776 (Thread-1): 16:33:59  SQL status: ALTER TABLE in 0.0 seconds
+2022-03-29 16:33:59.072725 (Thread-1): 16:33:59  On model.my_new_project.my_first_dbt_model: COMMIT
+2022-03-29 16:33:59.072873 (Thread-1): 16:33:59  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:33:59.072951 (Thread-1): 16:33:59  On model.my_new_project.my_first_dbt_model: COMMIT
+2022-03-29 16:33:59.076397 (Thread-1): 16:33:59  SQL status: COMMIT in 0.0 seconds
+2022-03-29 16:33:59.080927 (Thread-1): 16:33:59  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:33:59.081061 (Thread-1): 16:33:59  On model.my_new_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_first_dbt_model"} */
+drop table if exists "dbrq74es45kerr"."drshapiro"."my_first_dbt_model__dbt_backup" cascade
+2022-03-29 16:33:59.082063 (Thread-1): 16:33:59  SQL status: DROP TABLE in 0.0 seconds
+2022-03-29 16:33:59.083234 (Thread-1): 16:33:59  finished collecting timing info
+2022-03-29 16:33:59.083380 (Thread-1): 16:33:59  On model.my_new_project.my_first_dbt_model: Close
+2022-03-29 16:33:59.083916 (Thread-1): 16:33:59  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '529bd441-f0e8-44dc-b6a5-956ee9a358f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffacaaf37c0>]}
+2022-03-29 16:33:59.084281 (Thread-1): 16:33:59  1 of 2 OK created table model drshapiro.my_first_dbt_model...................... [SELECT 2 in 0.17s]
+2022-03-29 16:33:59.084398 (Thread-1): 16:33:59  Finished running node model.my_new_project.my_first_dbt_model
+2022-03-29 16:33:59.085127 (Thread-3): 16:33:59  Began running node model.my_new_project.my_second_dbt_model
+2022-03-29 16:33:59.085369 (Thread-3): 16:33:59  2 of 2 START view model drshapiro.my_second_dbt_model........................... [RUN]
+2022-03-29 16:33:59.085624 (Thread-3): 16:33:59  Acquiring new postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:33:59.085714 (Thread-3): 16:33:59  Began compiling node model.my_new_project.my_second_dbt_model
+2022-03-29 16:33:59.085801 (Thread-3): 16:33:59  Compiling model.my_new_project.my_second_dbt_model
+2022-03-29 16:33:59.087933 (Thread-3): 16:33:59  Writing injected SQL for node "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:33:59.098687 (Thread-3): 16:33:59  finished collecting timing info
+2022-03-29 16:33:59.098889 (Thread-3): 16:33:59  Began executing node model.my_new_project.my_second_dbt_model
+2022-03-29 16:33:59.115720 (Thread-3): 16:33:59  Writing runtime SQL for node "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:33:59.125999 (Thread-3): 16:33:59  Using postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:33:59.126151 (Thread-3): 16:33:59  On model.my_new_project.my_second_dbt_model: BEGIN
+2022-03-29 16:33:59.126243 (Thread-3): 16:33:59  Opening a new connection, currently in state init
+2022-03-29 16:33:59.139718 (Thread-3): 16:33:59  SQL status: BEGIN in 0.01 seconds
+2022-03-29 16:33:59.139873 (Thread-3): 16:33:59  Using postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:33:59.139953 (Thread-3): 16:33:59  On model.my_new_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_second_dbt_model"} */
+
+  create view "dbrq74es45kerr"."drshapiro"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dbrq74es45kerr"."drshapiro"."my_first_dbt_model"
+where id = 1
+  );
+2022-03-29 16:33:59.150566 (Thread-3): 16:33:59  SQL status: CREATE VIEW in 0.01 seconds
+2022-03-29 16:33:59.152766 (Thread-3): 16:33:59  Using postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:33:59.152877 (Thread-3): 16:33:59  On model.my_new_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_second_dbt_model"} */
+alter table "dbrq74es45kerr"."drshapiro"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+2022-03-29 16:33:59.154295 (Thread-3): 16:33:59  SQL status: ALTER TABLE in 0.0 seconds
+2022-03-29 16:33:59.155354 (Thread-3): 16:33:59  On model.my_new_project.my_second_dbt_model: COMMIT
+2022-03-29 16:33:59.155455 (Thread-3): 16:33:59  Using postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:33:59.155527 (Thread-3): 16:33:59  On model.my_new_project.my_second_dbt_model: COMMIT
+2022-03-29 16:33:59.158471 (Thread-3): 16:33:59  SQL status: COMMIT in 0.0 seconds
+2022-03-29 16:33:59.159844 (Thread-3): 16:33:59  Using postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:33:59.159942 (Thread-3): 16:33:59  On model.my_new_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_second_dbt_model"} */
+drop view if exists "dbrq74es45kerr"."drshapiro"."my_second_dbt_model__dbt_backup" cascade
+2022-03-29 16:33:59.160774 (Thread-3): 16:33:59  SQL status: DROP VIEW in 0.0 seconds
+2022-03-29 16:33:59.162011 (Thread-3): 16:33:59  finished collecting timing info
+2022-03-29 16:33:59.162158 (Thread-3): 16:33:59  On model.my_new_project.my_second_dbt_model: Close
+2022-03-29 16:33:59.162654 (Thread-3): 16:33:59  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '529bd441-f0e8-44dc-b6a5-956ee9a358f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffacaaf3670>]}
+2022-03-29 16:33:59.163056 (Thread-3): 16:33:59  2 of 2 OK created view model drshapiro.my_second_dbt_model...................... [CREATE VIEW in 0.08s]
+2022-03-29 16:33:59.163172 (Thread-3): 16:33:59  Finished running node model.my_new_project.my_second_dbt_model
+2022-03-29 16:33:59.164583 (MainThread): 16:33:59  Acquiring new postgres connection "master"
+2022-03-29 16:33:59.164727 (MainThread): 16:33:59  Using postgres connection "master"
+2022-03-29 16:33:59.164803 (MainThread): 16:33:59  On master: BEGIN
+2022-03-29 16:33:59.164882 (MainThread): 16:33:59  Opening a new connection, currently in state closed
+2022-03-29 16:33:59.178162 (MainThread): 16:33:59  SQL status: BEGIN in 0.01 seconds
+2022-03-29 16:33:59.178337 (MainThread): 16:33:59  On master: COMMIT
+2022-03-29 16:33:59.178417 (MainThread): 16:33:59  Using postgres connection "master"
+2022-03-29 16:33:59.178491 (MainThread): 16:33:59  On master: COMMIT
+2022-03-29 16:33:59.179021 (MainThread): 16:33:59  SQL status: COMMIT in 0.0 seconds
+2022-03-29 16:33:59.179137 (MainThread): 16:33:59  On master: Close
+2022-03-29 16:33:59.179571 (MainThread): 16:33:59  
+2022-03-29 16:33:59.179737 (MainThread): 16:33:59  Finished running 1 table model, 1 view model in 0.42s.
+2022-03-29 16:33:59.179827 (MainThread): 16:33:59  Connection 'master' was properly closed.
+2022-03-29 16:33:59.179893 (MainThread): 16:33:59  Connection 'model.my_new_project.my_first_dbt_model' was properly closed.
+2022-03-29 16:33:59.179955 (MainThread): 16:33:59  Connection 'model.my_new_project.my_second_dbt_model' was properly closed.
+2022-03-29 16:33:59.220636 (MainThread): 16:33:59  
+2022-03-29 16:33:59.220863 (MainThread): 16:33:59  Completed successfully
+2022-03-29 16:33:59.220967 (MainThread): 16:33:59  
+2022-03-29 16:33:59.221060 (MainThread): 16:33:59  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+2022-03-29 16:34:00.154261 (Thread-30): handling poll request
+2022-03-29 16:34:00.154587 (Thread-30): 16:34:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a3a670>]}
+2022-03-29 16:34:00.156300 (Thread-30): sending response (<Response 41275 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:34:00.795476 (Thread-31): handling status request
+2022-03-29 16:34:00.795799 (Thread-31): 16:34:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a32b50>]}
+2022-03-29 16:34:00.796256 (Thread-31): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:34:00.804992 (Thread-32): handling status request
+2022-03-29 16:34:00.805262 (Thread-32): 16:34:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a32a30>]}
+2022-03-29 16:34:00.805671 (Thread-32): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:46.130906 (Thread-33): handling ps request
+2022-03-29 16:37:46.131246 (Thread-33): 16:37:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a329a0>]}
+2022-03-29 16:37:46.131835 (Thread-33): sending response (<Response 1025 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:46.152839 (Thread-34): handling status request
+2022-03-29 16:37:46.153155 (Thread-34): 16:37:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a325e0>]}
+2022-03-29 16:37:46.153613 (Thread-34): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:46.205962 (Thread-35): handling status request
+2022-03-29 16:37:46.206284 (Thread-35): 16:37:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a32550>]}
+2022-03-29 16:37:46.206719 (Thread-35): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:46.246764 (Thread-36): handling status request
+2022-03-29 16:37:46.247072 (Thread-36): 16:37:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a323a0>]}
+2022-03-29 16:37:46.247502 (Thread-36): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:46.767691 (Thread-37): handling poll request
+2022-03-29 16:37:46.768067 (Thread-37): 16:37:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a32280>]}
+2022-03-29 16:37:46.770271 (Thread-37): sending response (<Response 58134 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:47.475743 (Thread-38): handling status request
+2022-03-29 16:37:47.476196 (Thread-38): 16:37:47  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13059ca640>]}
+2022-03-29 16:37:47.476682 (Thread-38): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:47.895703 (Thread-39): handling status request
+2022-03-29 16:37:47.896045 (Thread-39): 16:37:47  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a32a60>]}
+2022-03-29 16:37:47.902601 (Thread-40): handling status request
+2022-03-29 16:37:47.903025 (Thread-40): 16:37:47  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f12e4141100>]}
+2022-03-29 16:37:47.918311 (Thread-39): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:47.918718 (Thread-40): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:58.704593 (Thread-41): handling status request
+2022-03-29 16:37:58.704971 (Thread-41): 16:37:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a32220>]}
+2022-03-29 16:37:58.705433 (Thread-41): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:58.932308 (Thread-42): handling status request
+2022-03-29 16:37:58.932652 (Thread-42): 16:37:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a3ac40>]}
+2022-03-29 16:37:58.933115 (Thread-42): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:37:58.970680 (Thread-43): handling cli_args request
+2022-03-29 16:37:58.971031 (Thread-43): 16:37:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1305a3a070>]}
+2022-03-29 16:38:01.117242 (Thread-43): sending response (<Response 138 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:38:01.186363 (MainThread): 16:38:01  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-03-29 16:38:01.186808 (MainThread): 16:38:01  Partial parsing enabled, no changes found, skipping parsing
+2022-03-29 16:38:01.193113 (MainThread): 16:38:01  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd6dd2fe8-94a3-4af6-98c0-543970a34ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1966748160>]}
+2022-03-29 16:38:01.219887 (MainThread): 16:38:01  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd6dd2fe8-94a3-4af6-98c0-543970a34ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1966fa5f70>]}
+2022-03-29 16:38:01.220213 (MainThread): 16:38:01  Found 2 models, 4 tests, 0 snapshots, 0 analyses, 165 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+2022-03-29 16:38:01.221339 (MainThread): 16:38:01  
+2022-03-29 16:38:01.221712 (MainThread): 16:38:01  Acquiring new postgres connection "master"
+2022-03-29 16:38:01.222646 (ThreadPoolExecutor-0_0): 16:38:01  Acquiring new postgres connection "list_dbrq74es45kerr"
+2022-03-29 16:38:01.232342 (ThreadPoolExecutor-0_0): 16:38:01  Using postgres connection "list_dbrq74es45kerr"
+2022-03-29 16:38:01.232453 (ThreadPoolExecutor-0_0): 16:38:01  On list_dbrq74es45kerr: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "connection_name": "list_dbrq74es45kerr"} */
+
+    select distinct nspname from pg_namespace
+  
+2022-03-29 16:38:01.232540 (ThreadPoolExecutor-0_0): 16:38:01  Opening a new connection, currently in state init
+2022-03-29 16:38:01.247208 (ThreadPoolExecutor-0_0): 16:38:01  SQL status: SELECT 5 in 0.01 seconds
+2022-03-29 16:38:01.248344 (ThreadPoolExecutor-0_0): 16:38:01  On list_dbrq74es45kerr: Close
+2022-03-29 16:38:01.249639 (ThreadPoolExecutor-1_0): 16:38:01  Acquiring new postgres connection "list_dbrq74es45kerr_drshapiro"
+2022-03-29 16:38:01.256362 (ThreadPoolExecutor-1_0): 16:38:01  Using postgres connection "list_dbrq74es45kerr_drshapiro"
+2022-03-29 16:38:01.256549 (ThreadPoolExecutor-1_0): 16:38:01  On list_dbrq74es45kerr_drshapiro: BEGIN
+2022-03-29 16:38:01.256705 (ThreadPoolExecutor-1_0): 16:38:01  Opening a new connection, currently in state closed
+2022-03-29 16:38:01.268573 (ThreadPoolExecutor-1_0): 16:38:01  SQL status: BEGIN in 0.01 seconds
+2022-03-29 16:38:01.268752 (ThreadPoolExecutor-1_0): 16:38:01  Using postgres connection "list_dbrq74es45kerr_drshapiro"
+2022-03-29 16:38:01.268835 (ThreadPoolExecutor-1_0): 16:38:01  On list_dbrq74es45kerr_drshapiro: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "connection_name": "list_dbrq74es45kerr_drshapiro"} */
+select
+      'dbrq74es45kerr' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'drshapiro'
+    union all
+    select
+      'dbrq74es45kerr' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'drshapiro'
+  
+2022-03-29 16:38:01.272533 (ThreadPoolExecutor-1_0): 16:38:01  SQL status: SELECT 2 in 0.0 seconds
+2022-03-29 16:38:01.274290 (ThreadPoolExecutor-1_0): 16:38:01  On list_dbrq74es45kerr_drshapiro: ROLLBACK
+2022-03-29 16:38:01.275085 (ThreadPoolExecutor-1_0): 16:38:01  On list_dbrq74es45kerr_drshapiro: Close
+2022-03-29 16:38:01.279260 (MainThread): 16:38:01  Using postgres connection "master"
+2022-03-29 16:38:01.279408 (MainThread): 16:38:01  On master: BEGIN
+2022-03-29 16:38:01.279502 (MainThread): 16:38:01  Opening a new connection, currently in state init
+2022-03-29 16:38:01.290947 (MainThread): 16:38:01  SQL status: BEGIN in 0.01 seconds
+2022-03-29 16:38:01.291113 (MainThread): 16:38:01  Using postgres connection "master"
+2022-03-29 16:38:01.291197 (MainThread): 16:38:01  On master: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2022-03-29 16:38:01.307426 (MainThread): 16:38:01  SQL status: SELECT 1 in 0.02 seconds
+2022-03-29 16:38:01.308596 (MainThread): 16:38:01  On master: ROLLBACK
+2022-03-29 16:38:01.309305 (MainThread): 16:38:01  Using postgres connection "master"
+2022-03-29 16:38:01.309428 (MainThread): 16:38:01  On master: BEGIN
+2022-03-29 16:38:01.310586 (MainThread): 16:38:01  SQL status: BEGIN in 0.0 seconds
+2022-03-29 16:38:01.310710 (MainThread): 16:38:01  On master: COMMIT
+2022-03-29 16:38:01.310788 (MainThread): 16:38:01  Using postgres connection "master"
+2022-03-29 16:38:01.310861 (MainThread): 16:38:01  On master: COMMIT
+2022-03-29 16:38:01.311477 (MainThread): 16:38:01  SQL status: COMMIT in 0.0 seconds
+2022-03-29 16:38:01.311610 (MainThread): 16:38:01  On master: Close
+2022-03-29 16:38:01.312133 (MainThread): 16:38:01  Concurrency: 4 threads (target='default')
+2022-03-29 16:38:01.312258 (MainThread): 16:38:01  
+2022-03-29 16:38:01.314692 (Thread-1): 16:38:01  Began running node model.my_new_project.my_first_dbt_model
+2022-03-29 16:38:01.314976 (Thread-1): 16:38:01  1 of 2 START table model drshapiro.my_first_dbt_model........................... [RUN]
+2022-03-29 16:38:01.315247 (Thread-1): 16:38:01  Acquiring new postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:38:01.315344 (Thread-1): 16:38:01  Began compiling node model.my_new_project.my_first_dbt_model
+2022-03-29 16:38:01.315446 (Thread-1): 16:38:01  Compiling model.my_new_project.my_first_dbt_model
+2022-03-29 16:38:01.317848 (Thread-1): 16:38:01  Writing injected SQL for node "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:38:01.331638 (Thread-1): 16:38:01  finished collecting timing info
+2022-03-29 16:38:01.331823 (Thread-1): 16:38:01  Began executing node model.my_new_project.my_first_dbt_model
+2022-03-29 16:38:01.348132 (Thread-44): handling poll request
+2022-03-29 16:38:01.348455 (Thread-44): 16:38:01  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13059ce9a0>]}
+2022-03-29 16:38:01.349631 (Thread-44): sending response (<Response 18920 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:38:01.356536 (Thread-1): 16:38:01  Writing runtime SQL for node "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:38:01.369387 (Thread-1): 16:38:01  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:38:01.369550 (Thread-1): 16:38:01  On model.my_new_project.my_first_dbt_model: BEGIN
+2022-03-29 16:38:01.369644 (Thread-1): 16:38:01  Opening a new connection, currently in state closed
+2022-03-29 16:38:01.389797 (Thread-1): 16:38:01  SQL status: BEGIN in 0.02 seconds
+2022-03-29 16:38:01.390037 (Thread-1): 16:38:01  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:38:01.390136 (Thread-1): 16:38:01  On model.my_new_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_first_dbt_model"} */
+
+
+  create  table "dbrq74es45kerr"."drshapiro"."my_first_dbt_model__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+2022-03-29 16:38:01.394495 (Thread-1): 16:38:01  SQL status: SELECT 2 in 0.0 seconds
+2022-03-29 16:38:01.400289 (Thread-1): 16:38:01  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:38:01.400403 (Thread-1): 16:38:01  On model.my_new_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_first_dbt_model"} */
+alter table "dbrq74es45kerr"."drshapiro"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+2022-03-29 16:38:01.401526 (Thread-1): 16:38:01  SQL status: ALTER TABLE in 0.0 seconds
+2022-03-29 16:38:01.403401 (Thread-1): 16:38:01  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:38:01.403500 (Thread-1): 16:38:01  On model.my_new_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_first_dbt_model"} */
+alter table "dbrq74es45kerr"."drshapiro"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+2022-03-29 16:38:01.404401 (Thread-1): 16:38:01  SQL status: ALTER TABLE in 0.0 seconds
+2022-03-29 16:38:01.413408 (Thread-1): 16:38:01  On model.my_new_project.my_first_dbt_model: COMMIT
+2022-03-29 16:38:01.413519 (Thread-1): 16:38:01  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:38:01.413596 (Thread-1): 16:38:01  On model.my_new_project.my_first_dbt_model: COMMIT
+2022-03-29 16:38:01.415971 (Thread-1): 16:38:01  SQL status: COMMIT in 0.0 seconds
+2022-03-29 16:38:01.419906 (Thread-1): 16:38:01  Using postgres connection "model.my_new_project.my_first_dbt_model"
+2022-03-29 16:38:01.420008 (Thread-1): 16:38:01  On model.my_new_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_first_dbt_model"} */
+drop table if exists "dbrq74es45kerr"."drshapiro"."my_first_dbt_model__dbt_backup" cascade
+2022-03-29 16:38:01.433772 (Thread-1): 16:38:01  SQL status: DROP TABLE in 0.01 seconds
+2022-03-29 16:38:01.434773 (Thread-1): 16:38:01  finished collecting timing info
+2022-03-29 16:38:01.434912 (Thread-1): 16:38:01  On model.my_new_project.my_first_dbt_model: Close
+2022-03-29 16:38:01.435428 (Thread-1): 16:38:01  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd6dd2fe8-94a3-4af6-98c0-543970a34ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1966731760>]}
+2022-03-29 16:38:01.435847 (Thread-1): 16:38:01  1 of 2 OK created table model drshapiro.my_first_dbt_model...................... [SELECT 2 in 0.12s]
+2022-03-29 16:38:01.435970 (Thread-1): 16:38:01  Finished running node model.my_new_project.my_first_dbt_model
+2022-03-29 16:38:01.436811 (Thread-3): 16:38:01  Began running node model.my_new_project.my_second_dbt_model
+2022-03-29 16:38:01.437067 (Thread-3): 16:38:01  2 of 2 START view model drshapiro.my_second_dbt_model........................... [RUN]
+2022-03-29 16:38:01.437323 (Thread-3): 16:38:01  Acquiring new postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:38:01.437413 (Thread-3): 16:38:01  Began compiling node model.my_new_project.my_second_dbt_model
+2022-03-29 16:38:01.437500 (Thread-3): 16:38:01  Compiling model.my_new_project.my_second_dbt_model
+2022-03-29 16:38:01.439560 (Thread-3): 16:38:01  Writing injected SQL for node "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:38:01.452070 (Thread-3): 16:38:01  finished collecting timing info
+2022-03-29 16:38:01.452235 (Thread-3): 16:38:01  Began executing node model.my_new_project.my_second_dbt_model
+2022-03-29 16:38:01.468112 (Thread-3): 16:38:01  Writing runtime SQL for node "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:38:01.481601 (Thread-3): 16:38:01  Using postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:38:01.481769 (Thread-3): 16:38:01  On model.my_new_project.my_second_dbt_model: BEGIN
+2022-03-29 16:38:01.481864 (Thread-3): 16:38:01  Opening a new connection, currently in state init
+2022-03-29 16:38:01.497679 (Thread-3): 16:38:01  SQL status: BEGIN in 0.02 seconds
+2022-03-29 16:38:01.497859 (Thread-3): 16:38:01  Using postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:38:01.497982 (Thread-3): 16:38:01  On model.my_new_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_second_dbt_model"} */
+
+  create view "dbrq74es45kerr"."drshapiro"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dbrq74es45kerr"."drshapiro"."my_first_dbt_model"
+where id = 1
+  );
+2022-03-29 16:38:01.503360 (Thread-3): 16:38:01  SQL status: CREATE VIEW in 0.01 seconds
+2022-03-29 16:38:01.506663 (Thread-3): 16:38:01  Using postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:38:01.506771 (Thread-3): 16:38:01  On model.my_new_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_second_dbt_model"} */
+alter table "dbrq74es45kerr"."drshapiro"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+2022-03-29 16:38:01.507968 (Thread-3): 16:38:01  SQL status: ALTER TABLE in 0.0 seconds
+2022-03-29 16:38:01.508911 (Thread-3): 16:38:01  On model.my_new_project.my_second_dbt_model: COMMIT
+2022-03-29 16:38:01.509011 (Thread-3): 16:38:01  Using postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:38:01.509085 (Thread-3): 16:38:01  On model.my_new_project.my_second_dbt_model: COMMIT
+2022-03-29 16:38:01.511574 (Thread-3): 16:38:01  SQL status: COMMIT in 0.0 seconds
+2022-03-29 16:38:01.513083 (Thread-3): 16:38:01  Using postgres connection "model.my_new_project.my_second_dbt_model"
+2022-03-29 16:38:01.513181 (Thread-3): 16:38:01  On model.my_new_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.my_second_dbt_model"} */
+drop view if exists "dbrq74es45kerr"."drshapiro"."my_second_dbt_model__dbt_backup" cascade
+2022-03-29 16:38:01.514078 (Thread-3): 16:38:01  SQL status: DROP VIEW in 0.0 seconds
+2022-03-29 16:38:01.514971 (Thread-3): 16:38:01  finished collecting timing info
+2022-03-29 16:38:01.515111 (Thread-3): 16:38:01  On model.my_new_project.my_second_dbt_model: Close
+2022-03-29 16:38:01.515625 (Thread-3): 16:38:01  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd6dd2fe8-94a3-4af6-98c0-543970a34ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1964647e20>]}
+2022-03-29 16:38:01.515955 (Thread-3): 16:38:01  2 of 2 OK created view model drshapiro.my_second_dbt_model...................... [CREATE VIEW in 0.08s]
+2022-03-29 16:38:01.516068 (Thread-3): 16:38:01  Finished running node model.my_new_project.my_second_dbt_model
+2022-03-29 16:38:01.517408 (MainThread): 16:38:01  Acquiring new postgres connection "master"
+2022-03-29 16:38:01.517557 (MainThread): 16:38:01  Using postgres connection "master"
+2022-03-29 16:38:01.517635 (MainThread): 16:38:01  On master: BEGIN
+2022-03-29 16:38:01.517714 (MainThread): 16:38:01  Opening a new connection, currently in state closed
+2022-03-29 16:38:01.531008 (MainThread): 16:38:01  SQL status: BEGIN in 0.01 seconds
+2022-03-29 16:38:01.531144 (MainThread): 16:38:01  On master: COMMIT
+2022-03-29 16:38:01.531222 (MainThread): 16:38:01  Using postgres connection "master"
+2022-03-29 16:38:01.531294 (MainThread): 16:38:01  On master: COMMIT
+2022-03-29 16:38:01.532034 (MainThread): 16:38:01  SQL status: COMMIT in 0.0 seconds
+2022-03-29 16:38:01.532147 (MainThread): 16:38:01  On master: Close
+2022-03-29 16:38:01.532541 (MainThread): 16:38:01  
+2022-03-29 16:38:01.532652 (MainThread): 16:38:01  Finished running 1 table model, 1 view model in 0.31s.
+2022-03-29 16:38:01.532735 (MainThread): 16:38:01  Connection 'master' was properly closed.
+2022-03-29 16:38:01.532803 (MainThread): 16:38:01  Connection 'model.my_new_project.my_first_dbt_model' was properly closed.
+2022-03-29 16:38:01.532876 (MainThread): 16:38:01  Connection 'model.my_new_project.my_second_dbt_model' was properly closed.
+2022-03-29 16:38:01.583530 (MainThread): 16:38:01  
+2022-03-29 16:38:01.583761 (MainThread): 16:38:01  Completed successfully
+2022-03-29 16:38:01.583862 (MainThread): 16:38:01  
+2022-03-29 16:38:01.583949 (MainThread): 16:38:01  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+2022-03-29 16:38:02.579272 (Thread-45): handling poll request
+2022-03-29 16:38:02.579648 (Thread-45): 16:38:02  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13059dba60>]}
+2022-03-29 16:38:02.581465 (Thread-45): sending response (<Response 35989 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:38:03.151129 (Thread-46): handling status request
+2022-03-29 16:38:03.151467 (Thread-46): 16:38:03  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f12e41f2880>]}
+2022-03-29 16:38:03.151946 (Thread-46): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:38:03.204345 (Thread-47): handling status request
+2022-03-29 16:38:03.204683 (Thread-47): 16:38:03  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f12e41f2550>]}
+2022-03-29 16:38:03.205180 (Thread-47): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
+2022-03-29 16:38:09.566893 (Thread-48): handling status request
+2022-03-29 16:38:09.567243 (Thread-48): 16:38:09  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'e83b0e4c-ee68-4c35-a4c5-828bf392ed48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f12e41f27f0>]}
+2022-03-29 16:38:09.567681 (Thread-48): sending response (<Response 1241 bytes [200 OK]>) to 10.0.12.141
