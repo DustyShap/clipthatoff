@@ -4,7 +4,6 @@ from sqlalchemy.exc import SQLAlchemyError
 
 from flask import (Flask, session,
                    render_template, url_for, redirect, request, jsonify)
-# from flask_uploads import UploadSet, configure_uploads, AUDIO
 from sqlalchemy import create_engine, desc
 from pytz import timezone
 from sqlalchemy import exc
@@ -20,9 +19,6 @@ from clipthatoff.create import create_app
 application = app = Flask(__name__)
 
 app = create_app()
-audio = UploadSet('audio', AUDIO)
-app.config['UPLOADED_AUDIO_DEST'] = os.environ['UPLOAD_PATH']
-configure_uploads(app, audio)
 app.app_context().push()
 s3 = boto3.client('s3')
 TIMEZONE = timezone('America/Chicago')
