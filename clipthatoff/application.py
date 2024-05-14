@@ -8,6 +8,7 @@ from flask import (Flask, session,
 from sqlalchemy import create_engine, desc
 from pytz import timezone
 from sqlalchemy import exc
+from werkzeug.utils import secure_filename
 
 
 from clipthatoff.models import Drop, db, AdminUser, ClickStat, SearchStat
@@ -46,14 +47,25 @@ def upload_login():
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
-    filename = audio.save(request.files['audio'])
-    # s3.upload_fileobj(dl_file, 'upload-testing', dl_file.filename)
-    file_upload = Drop(
-                filename=filename,
-                speaker=request.form['speaker'].lower().strip(),
-                tags=request.form['tags'].lower(),
-                transcription=request.form['transcription'].lower().replace("'",""))
-    database_add(file_upload)
+    if request.method == 'POST':
+        # Get file from the request
+        file = request.files['audio']
+        filename = secure_filename(file.filename)
+
+        # Create S3 client
+        s3_client = boto3.client('s3')
+        bucket_name = 'tmadrops'
+
+        # Upload the file directly to S3
+        s3_client.put_object(Bucket=bucket_name, Key=filename, Body=file)
+
+        # Add other metadata to database
+        file_upload = Drop(
+            filename=filename,
+            speaker=request.form['speaker'].lower().strip(),
+            tags=request.form['tags'].lower(),
+            transcription=request.form['transcription'].lower().replace("'",""))
+        database_add(file_upload)
 
     return jsonify({'file': filename})
 
@@ -91,11 +103,11 @@ def process():
         print("General error:", e)
         # Return a generic error response
         return "An error occurred", 500
+
 @app.route("/click_stat", methods=["POST"])
 def click_stat():
     filename = request.form['filename']
     cell_clicked = request.form['cell_clicked']
-    print(filename)
     if filename and cell_clicked:
         drop_id = Drop.id_lookup(filename)
         click = ClickStat(
@@ -120,9 +132,6 @@ def search_stat():
     return ('', 201)
 
 
-@app.route('/robots.txt')
-def robots_dot_txt():
-	return "User-agent: *\nDisallow: /"
 
 
 def database_add(element):
