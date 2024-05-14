@@ -1,16 +1,14 @@
 import boto3
-import csv
 import datetime
-import os
-import requests
+from sqlalchemy.exc import SQLAlchemyError
+
 from flask import (Flask, session,
                    render_template, url_for, redirect, request, jsonify)
-from flask_session import Session
-from flask_uploads import UploadSet, configure_uploads, AUDIO
+# from flask_uploads import UploadSet, configure_uploads, AUDIO
 from sqlalchemy import create_engine, desc
-from sqlalchemy.orm import scoped_session, sessionmaker
-from sqlalchemy import create_engine
 from pytz import timezone
+from sqlalchemy import exc
+
 
 from clipthatoff.models import Drop, db, AdminUser, ClickStat, SearchStat
 from clipthatoff.create import create_app
@@ -62,29 +60,37 @@ def upload():
 
 @app.route('/process', methods=['POST', 'GET'])
 def process():
-    search_term = request.form['tags'].lower().strip()
-    # This is either the name of the speaker or search_drops
-    chosen = request.form['chosen'].lower()
+    try:
+        search_term = request.form['tags'].lower().strip()
+        chosen = request.form['chosen'].lower()
 
-    if chosen == 'search_drops':
-        search_method = 'search_value'
-        drops = Drop.query.filter(
-                Drop.speaker.isnot(None),
-                Drop.tags.ilike("%"+search_term+"%")
-        ).all()
+        if chosen == 'search_drops':
+            search_method = 'search_value'
+            drops = Drop.query.filter(
+                    Drop.speaker.isnot(None),
+                    Drop.tags.ilike("%"+search_term+"%")
+            ).all()
 
-    elif chosen == 'last_fifty':
-        search_method = 'last_fifty'
-        drops = db.session.query(Drop).order_by(desc(Drop.id)).limit(50)
+        elif chosen == 'last_fifty':
+            search_method = 'last_fifty'
+            drops = db.session.query(Drop).order_by(desc(Drop.id)).limit(50)
 
-    else:  # if a name was clicked
-        search_method = 'name'
-        drops = Drop.query.filter(
-                Drop.speaker == chosen
-        ).all()
+        else:  # if a name was clicked
+            search_method = 'name'
+            drops = Drop.query.filter(
+                    Drop.speaker == chosen
+            ).all()
 
-    return process_drop_results(drops, search_method)
-
+        return process_drop_results(drops, search_method)
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        print("Database error occurred:", e)
+        # Consider returning an error response or rendering an error page
+        return "An error occurred", 500
+    except Exception as e:
+        print("General error:", e)
+        # Return a generic error response
+        return "An error occurred", 500
 @app.route("/click_stat", methods=["POST"])
 def click_stat():
     filename = request.form['filename']
