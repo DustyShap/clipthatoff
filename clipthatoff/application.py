@@ -75,9 +75,9 @@ def process():
         if chosen == 'search_drops':
             search_method = 'search_value'
             drops = Drop.query.filter(
-                    Drop.speaker.isnot(None),
-                    Drop.tags.ilike("%"+search_term+"%")
-            ).all()
+                Drop.speaker.isnot(None),
+                Drop.tags.ilike("%" + search_term + "%")
+            ).order_by(desc(Drop.id)).all()
 
         elif chosen == 'last_fifty':
             search_method = 'last_fifty'
@@ -86,9 +86,8 @@ def process():
         else:  # if a name was clicked
             search_method = 'name'
             drops = Drop.query.filter(
-                    Drop.speaker == chosen
-            ).all()
-
+                Drop.speaker == chosen
+            ).order_by(desc(Drop.id)).all()
         return process_drop_results(drops, search_method)
     except SQLAlchemyError as e:
         db.session.rollback()
